@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/06/05 13:31:35.000.253,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/06/05 13:31:35.000.239,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/06/05 15:31:31.000.270,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/06/05 15:31:31.000.281,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/06/05 15:32:23.000.035,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/06/05 15:32:23.000.047,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/11/12 13:46:40.000.060,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/11/12 13:46:40.000.071,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/11/12 13:46:57.000.867,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit2.cpp</Transaction>
+    <Transaction>2019/11/12 14:00:23.000.071,=C:\Users\BTSSN2\Desktop\DasHard.h.h</Transaction>
+    <Transaction>2019/11/12 14:00:40.000.563,=C:\Users\BTSSN2\Desktop\DasHard2006.dll</Transaction>
+    <Transaction>2019/11/12 14:40:13.000.826,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Unit2.h=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit2.h</Transaction>
+    <Transaction>2019/11/12 14:40:13.000.826,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Unit2.cpp=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit2.cpp</Transaction>
+    <Transaction>2019/11/12 14:40:13.000.178,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Unit1.dfm=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.dfm</Transaction>
+    <Transaction>2019/11/12 14:40:13.000.178,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Unit1.cpp=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/11/12 14:40:13.000.178,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Unit1.h=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Unit1.h</Transaction>
+    <Transaction>2019/11/12 14:40:14.000.377,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Project1PCH1.h=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/11/12 14:40:15.000.063,C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\Project1.cbproj=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\Project1.cbproj</Transaction>
+    <Transaction>2019/11/12 14:40:43.000.409,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\include\DasHard.h.h</Transaction>
+    <Transaction>2019/11/12 14:40:44.000.006,=C:\Users\BTSSN2\Documents\Embarcadero\Studio\Projets\TP6\include\DasHard2006.dll</Transaction>
+    <Transaction>2019/11/15 10:50:37.000.934,E:\TP6\Project1.cbproj=E:\TP6\Utils.cbproj</Transaction>
+    <Transaction>2019/11/15 10:50:37.000.902,E:\TP6\Project1PCH1.h=E:\TP6\UtilsPCH1.h</Transaction>
+    <Transaction>2019/11/15 10:50:55.000.211,E:\TP6\Unit1.h=E:\TP6\main.h</Transaction>
+    <Transaction>2019/11/15 10:50:55.000.211,E:\TP6\Unit1.cpp=E:\TP6\main.cpp</Transaction>
+    <Transaction>2019/11/15 10:50:55.000.211,E:\TP6\Unit1.dfm=E:\TP6\main.dfm</Transaction>
+    <Transaction>2019/11/15 16:44:16.000.677,E:\DMX\Unit2.cpp=E:\DMX\EnAttente.cpp</Transaction>
+    <Transaction>2019/11/15 16:44:16.000.677,E:\DMX\Unit2.h=E:\DMX\EnAttente.h</Transaction>
+  </Transactions>
+</BorlandProject>

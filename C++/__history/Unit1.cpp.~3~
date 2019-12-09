@@ -1,0 +1,63 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "include/DasHard.h.h"
+//#include "include/DasHard2006.dll"
+#include "Unit2.h"
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	g_dasusbdll=LoadLibrary(L"DasHard2006.dll");
+	if(g_dasusbdll)
+	{
+		DasUsbCommand=(DASHARDCOMMAND)::GetProcAddress((HMODULE)g_dasusbdll,"DasUsbCommand");
+	}
+	interface_open=DasUsbCommand(DHC_INIT,0,NULL);
+	lblResultOpenDMX->Caption=interface_open;
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	if(interface_open>0){
+		int i;
+		for(i=0;i<DMX_MAXCHANNEL+1;i++){
+			dmxBlock[i]=0;
+		}
+		DasUsbCommand(DHC_DMXOUT,DMX_MAXCHANNEL,dmxBlock);
+	}
+}
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar2Change(TObject *Sender)
+{
+   CouleurB = ScrollBar2->Position;
+   Edit3->Text = CouleurB;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar4Change(TObject *Sender)
+{
+	CouleurW = ScrollBar4->Position;
+	Edit4->Text = CouleurW;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar3Change(TObject *Sender)
+{
+   CouleurG = ScrollBar3->Position;
+   Edit2->Text = CouleurG;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar1Change(TObject *Sender)
+{
+	CouleurR = ScrollBar1->Position;
+	Edit1->Text = CouleurR;
+}
+//---------------------------------------------------------------------------

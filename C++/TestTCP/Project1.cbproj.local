@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/11/15 16:33:18.239,=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/11/15 16:33:18.252,=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/11/15 16:46:10.324,E:\DMX\TestTCP\Unit1.dfm=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Unit1.dfm</Transaction>
+    <Transaction>2019/11/15 16:46:10.324,E:\DMX\TestTCP\Unit1.h=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Unit1.h</Transaction>
+    <Transaction>2019/11/15 16:46:10.324,E:\DMX\TestTCP\Unit1.cpp=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2019/11/15 16:46:22.825,E:\DMX\TestTCP\Project1PCH1.h=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2019/11/15 16:46:24.421,E:\DMX\TestTCP\Project1.cbproj=C:\Users\Matthias Jouen\Documents\Embarcadero\Studio\Projets\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

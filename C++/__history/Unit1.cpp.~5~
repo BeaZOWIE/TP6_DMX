@@ -1,0 +1,95 @@
+﻿//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "include/DasHard.h.h"
+//#include "include/DasHard2006.dll"
+#include "Unit2.h"
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	g_dasusbdll=LoadLibrary(L"DasHard2006.dll");
+	if(g_dasusbdll)
+	{
+		DasUsbCommand=(DASHARDCOMMAND)::GetProcAddress((HMODULE)g_dasusbdll,"DasUsbCommand");
+	}
+	interface_open=DasUsbCommand(DHC_INIT,0,NULL);
+	lblResultOpenDMX->Caption=interface_open;
+	for (int i = 0; i < 512; i++) {
+		dmxBlock[i]=0;
+	}
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+
+			interface_open=1;
+}
+//---------------------------------------------------------------------------
+ void __fastcall TForm1::SendTrame()
+ {
+	if(interface_open>0)
+	{
+
+		try{
+			dmxBlock[0]=0xFF;
+			dmxBlock[1]=0xFF;
+			dmxBlock[2]=0xFF;
+			dmxBlock[3]=0xFF;
+            dmxBlock[5]=0xFF;
+			DasUsbCommand(DHC_DMXOUT,DMX_MAXCHANNEL,dmxBlock);
+		}
+		catch(int x)
+		{
+		}
+	}
+
+ }
+ void __fastcall TForm1::FormClose(TObject*Sender,TCloseAction&Action)
+ {
+ //FermetureduDMX�l'arretduprogramme
+	if(interface_open>0)
+	{
+		DasUsbCommand(DHC_CLOSE,0,0);
+		DasUsbCommand(DHC_EXIT,0,NULL);
+	}
+	if(g_dasusbdll!=NULL)
+	FreeLibrary(g_dasusbdll);
+ }
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar2Change(TObject *Sender)
+{
+   CouleurB = ScrollBar2->Position;
+   Edit3->Text = CouleurB;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar4Change(TObject *Sender)
+{
+	CouleurW = ScrollBar4->Position;
+	Edit4->Text = CouleurW;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar3Change(TObject *Sender)
+{
+   CouleurG = ScrollBar3->Position;
+   Edit2->Text = CouleurG;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ScrollBar1Change(TObject *Sender)
+{
+	CouleurR = ScrollBar1->Position;
+	Edit1->Text = CouleurR;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Timer1Timer(TObject *Sender)
+{
+	SendTrame();
+}
+//---------------------------------------------------------------------------

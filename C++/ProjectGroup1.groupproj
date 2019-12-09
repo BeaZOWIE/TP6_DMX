@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CC1B8E1F-B980-4EF3-BF49-5F72D7CBD8F8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Utils.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Public\Documents\Embarcadero\Studio\16.0\Samples\Object Pascal\VCL\InetWinSockets\inetwinsockets.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Utils">
+        <MSBuild Projects="Utils.cbproj"/>
+    </Target>
+    <Target Name="Utils:Clean">
+        <MSBuild Projects="Utils.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Utils:Make">
+        <MSBuild Projects="Utils.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="inetwinsockets">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\16.0\Samples\Object Pascal\VCL\InetWinSockets\inetwinsockets.dproj"/>
+    </Target>
+    <Target Name="inetwinsockets:Clean">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\16.0\Samples\Object Pascal\VCL\InetWinSockets\inetwinsockets.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="inetwinsockets:Make">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\16.0\Samples\Object Pascal\VCL\InetWinSockets\inetwinsockets.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Utils;inetwinsockets"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Utils:Clean;inetwinsockets:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Utils:Make;inetwinsockets:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

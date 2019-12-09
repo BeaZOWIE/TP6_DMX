@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "include/DasHard.h.h"
+//#include "include/DasHard2006.dll"
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	g_dasusbdll=LoadLibrary(L"DasHard2006.dll");
+	if(g_dasusbdll)
+	{
+		DasUsbCommand=(DASHARDCOMMAND)::GetProcAddress((HMODULE)g_dasusbdll,"DasUsbCommand");
+	}
+	interface_open=DasUsbCommand(DHC_INIT,0,NULL);
+	lblResultOpenDMX->Caption=interface_open;
+}
+//---------------------------------------------------------------------------

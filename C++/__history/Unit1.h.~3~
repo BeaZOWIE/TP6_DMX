@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include<System.Classes.hpp>
+#include<Vcl.Controls.hpp>
+#include<Vcl.StdCtrls.hpp>
+#include<Vcl.Forms.hpp>
+#include<Vcl.ComCtrls.hpp>
+#include<Vcl.ExtCtrls.hpp>
+#include"include/DasHard.h.h"
+#define DMX_MAXCHANNEL 512
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+
+__published:	// Composants gérés par l'EDI
+
+	TButton *Button1;
+	TLabel *lblResultOpenDMX;
+	TScrollBar *ScrollBar2;
+	TLabel *Label1;
+	TLabel *Label2;
+	TLabel *Label3;
+	TScrollBar *ScrollBar4;
+	TLabel *Label4;
+	TScrollBar *ScrollBar1;
+	TScrollBar *ScrollBar3;
+	TEdit *Edit1;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TEdit *Edit4;
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall ScrollBar2Change(TObject *Sender);
+	void __fastcall ScrollBar4Change(TObject *Sender);
+	void __fastcall ScrollBar3Change(TObject *Sender);
+	void __fastcall ScrollBar1Change(TObject *Sender);
+
+private:	// Déclarations utilisateur
+
+	HINSTANCE g_dasusbdll;
+	typedef int(*DASHARDCOMMAND)(int,int,unsigned char*);
+	DASHARDCOMMAND DasUsbCommand;
+	int interface_open;
+	unsigned char dmxBlock[512];
+	//void__fastcall SendTrame();
+	int CouleurR;
+	int CouleurG;
+	int CouleurB;
+	int CouleurW;
+
+public:		// Déclarations utilisateur
+
+	__fastcall TForm1(TComponent* Owner);
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

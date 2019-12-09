@@ -1,0 +1,200 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 300
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Textco: TLabel
+    Left = 39
+    Top = 12
+    Width = 130
+    Height = 13
+    Caption = 'Impossible de se connecter'
+  end
+  object Labeltcp: TLabel
+    Left = 303
+    Top = 36
+    Width = 100
+    Height = 13
+    Caption = 'Le serveur est '#233'teint'
+  end
+  object DMXColor: TLabel
+    Left = 306
+    Top = 168
+    Width = 66
+    Height = 13
+    Caption = 'Couleurs DMX'
+  end
+  object Bleu: TButton
+    Left = 438
+    Top = 255
+    Width = 75
+    Height = 25
+    Caption = 'Bleu'
+    TabOrder = 0
+    OnClick = BleuClick
+  end
+  object Connect: TPanel
+    Left = 16
+    Top = 8
+    Width = 17
+    Height = 17
+    Color = clRed
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object Rouge: TButton
+    Left = 438
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Rouge'
+    TabOrder = 2
+    OnClick = RougeClick
+  end
+  object Vert: TButton
+    Left = 438
+    Top = 193
+    Width = 75
+    Height = 25
+    Caption = 'Vert'
+    TabOrder = 3
+    OnClick = VertClick
+  end
+  object Blanc: TButton
+    Left = 303
+    Top = 193
+    Width = 75
+    Height = 25
+    Caption = 'Blanc'
+    TabOrder = 4
+    OnClick = BlancClick
+  end
+  object ON: TButton
+    Left = 8
+    Top = 62
+    Width = 75
+    Height = 25
+    Caption = 'ON'
+    TabOrder = 5
+    OnClick = ONClick
+  end
+  object Stroboscope: TButton
+    Left = 303
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Stroboscope'
+    TabOrder = 6
+    OnClick = StroboscopeClick
+  end
+  object Panel1: TPanel
+    Left = 384
+    Top = 196
+    Width = 24
+    Height = 18
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 7
+  end
+  object PanelBleu: TPanel
+    Left = 519
+    Top = 258
+    Width = 24
+    Height = 18
+    Color = clBlue
+    ParentBackground = False
+    TabOrder = 8
+  end
+  object Panel3: TPanel
+    Left = 519
+    Top = 227
+    Width = 25
+    Height = 17
+    Color = clRed
+    ParentBackground = False
+    TabOrder = 9
+  end
+  object Panel4: TPanel
+    Left = 519
+    Top = 196
+    Width = 25
+    Height = 18
+    Color = clLime
+    ParentBackground = False
+    TabOrder = 10
+  end
+  object OFF: TButton
+    Left = 8
+    Top = 100
+    Width = 75
+    Height = 25
+    Caption = 'OFF'
+    TabOrder = 11
+    OnClick = OFFClick
+  end
+  object MemoTCP: TMemo
+    Left = 384
+    Top = 64
+    Width = 129
+    Height = 62
+    Lines.Strings = (
+      'MemoTCP')
+    TabOrder = 12
+    Visible = False
+  end
+  object ServerON: TButton
+    Left = 303
+    Top = 62
+    Width = 75
+    Height = 25
+    Caption = 'Server ON'
+    TabOrder = 13
+    OnClick = ServerONClick
+  end
+  object ServerOFF: TButton
+    Left = 303
+    Top = 100
+    Width = 75
+    Height = 25
+    Caption = 'ServerOFF'
+    TabOrder = 14
+    Visible = False
+    OnClick = ServerOFFClick
+  end
+  object LMessage: TListBox
+    Left = 120
+    Top = 192
+    Width = 121
+    Height = 97
+    ItemHeight = 13
+    TabOrder = 15
+  end
+  object Timer1: TTimer
+    Interval = 40
+    OnTimer = Timer1Timer
+    Left = 592
+    Top = 24
+  end
+  object DMXServer: TIdTCPServer
+    Bindings = <
+      item
+        IP = '0.0.0.0'
+        Port = 25010
+      end>
+    DefaultPort = 25010
+    OnConnect = DMXServerConnect
+    OnExecute = DMXServerExecute
+    Left = 592
+    Top = 80
+  end
+end
