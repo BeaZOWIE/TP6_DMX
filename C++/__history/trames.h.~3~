@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef tramesH
+#define tramesH
+#include "main.h"
+ class trames
+{
+	private :
+		int r, g, b;
+
+	public ://declarations des fonctions
+	  trames();
+	  ~trames();
+	  void fondu();
+};
+
+
+
+//---------------------------------------------------------------------------
+#endif

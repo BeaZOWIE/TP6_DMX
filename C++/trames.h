@@ -3,14 +3,16 @@
 #ifndef tramesH
 #define tramesH
 #include "main.h"
-class PilotageLumiere
+ class trames
 {
-	private:
+	private :
+		int r,v,b;
+		trames *lumiere;
 
-
-	public:
-
-	convert(valeur);
+	public ://declarations des fonctions
+	  trames();
+	  ~trames();
+	  void fondu();
 };
 
 

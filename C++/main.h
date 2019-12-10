@@ -18,6 +18,7 @@
 #include <IdCustomTCPServer.hpp>
 #include <IdTCPServer.hpp>
 #include <IdContext.hpp>
+#include "trames.h"
 #define DMX_MAXCHANNEL 512
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
@@ -25,35 +26,31 @@ class TForm1 : public TForm
 
 __published:	// Composants gérés par l'EDI
 	TTimer *Timer1;
-	TButton *Bleu;
 	TPanel *Connect;
 	TLabel *Textco;
-	TButton *Rouge;
-	TButton *Vert;
-	TButton *Blanc;
-	TButton *ON;
-	TButton *Stroboscope;
-	TPanel *Panel1;
-	TPanel *PanelBleu;
-	TPanel *Panel3;
-	TPanel *Panel4;
-	TButton *OFF;
-	TLabel *DMXColor;
+	TButton *Close;
 	TScrollBar *red;
 	TLabel *Labelred;
 	TScrollBar *green;
 	TLabel *Labelgreen;
 	TScrollBar *blue;
 	TLabel *Labelblue;
+	TScrollBar *white;
+	TLabel *Labelwhite;
+	TScrollBar *stroboscope;
+	TButton *reset;
+	TButton *lampe2;
+	TButton *lampe3;
+	TButton *fondu;
+	TTimer *Timer2;
 	void __fastcall Timer1Timer(TObject *Sender);
 	void __fastcall FormClose(TObject*Sender,TCloseAction&Action);
-	void __fastcall BleuClick(TObject *Sender);
-	void __fastcall BlancClick(TObject *Sender);
-	void __fastcall RougeClick(TObject *Sender);
-	void __fastcall VertClick(TObject *Sender);
-	void __fastcall ONClick(TObject *Sender);
-	void __fastcall OFFClick(TObject *Sender);
-	void __fastcall StroboscopeClick(TObject *Sender);
+	void __fastcall CloseClick(TObject *Sender);
+	void __fastcall resetClick(TObject *Sender);
+	void __fastcall lampe2Click(TObject *Sender);
+	void __fastcall lampe3Click(TObject *Sender);
+	void __fastcall fonduClick(TObject *Sender);
+	void __fastcall Timer2Timer(TObject *Sender);
 
 
 
@@ -70,6 +67,8 @@ private:	// Déclarations utilisateur
 	int CouleurG;
 	int CouleurB;
 	int CouleurW;
+	int cas;
+	int r,v,b;
 
 public:		// Déclarations utilisateur
       SOCKET sock;
